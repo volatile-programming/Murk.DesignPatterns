@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard1.0</TargetFramework>
+		<Authors>jerajo</Authors>
+		<Version>0.0.1</Version>
+		<Company>TEXOIDER</Company>
+		<Description>A cross cutting consern library which provides interfaces, base classes and generic implemetations for the command design patterns.</Description>
+		<Copyright>MIT</Copyright>
+		<PackageProjectUrl></PackageProjectUrl>
+		<PackageIcon>Desing Paterns;CLEAN;Clean Architecture;SOLID;Cross Cutting Concern</PackageIcon>
+		<PackageIconUrl />
+		<RepositoryType>NuGet</RepositoryType>
+		<PackageTags>Desing Paterns;Cross Cutting Concern</PackageTags>
+		<PackageReleaseNotes>Demo Release v0.0.1
+
+Interfaces, base classes and generic implementation of the command desgn pattern added.</PackageReleaseNotes>
+		<NeutralLanguage>English</NeutralLanguage>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\Command\Murk.Command.Implementations\Murk.Command.Implementations.xml</DocumentationFile>
+		<OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Murk.Common\Murk.Common.csproj" />
+	  <ProjectReference Include="..\Murk.Command.BaseClasses\Murk.Command.BaseClasses.csproj" />
+	</ItemGroup>
+</Project>

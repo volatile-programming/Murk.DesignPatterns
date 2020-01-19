@@ -1,0 +1,1124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Murk.Command.Implementations</name>
+    </assembly>
+    <members>
+        <member name="T:Murk.Command.Command">
+            <summary>
+            Lightweight disposable command.
+            Just has the execute functionality.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Command.#ctor(System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Command.Execute(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Command.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.Command`1">
+            <summary>
+            Lightweight disposable generic command.
+            Just has the execute functionality.
+            </summary>
+            <typeparam name="T"><inheritdoc /></typeparam>
+        </member>
+        <member name="M:Murk.Command.Command`1.#ctor(System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Command`1.Execute(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Command`1.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.CommandAsync">
+            <summary>
+            Lightweight disposable command.
+            Just has the execute functionality.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandAsync.#ctor(System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandAsync.ExecuteAsync(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandAsync.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.CommandAsync`1">
+            <summary>
+            Lightweight disposable generic command.
+            Just has the execute functionality.
+            </summary>
+            <typeparam name="T"><inheritdoc /></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandAsync`1.#ctor(System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandAsync`1.ExecuteAsync(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandAsync`1.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.CommandDisableAble">
+            <summary>
+            Disposable disposable able command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble.#ctor(System.Func{System.Object,System.Boolean},System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble.CanExecute(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble.Execute(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandDisableAble`1">
+            <summary>
+            Disposable generic disposable able command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble`1.#ctor(System.Func{`0,System.Boolean},System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble`1.CanExecute(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble`1.Execute(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAble`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandDisableAbleAsync">
+            <summary>
+            Disposable disable able async command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync.#ctor(System.Func{System.Object,System.Boolean},System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync.CanExecuteAsync(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync.ExecuteAsync(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandDisableAbleAsync`1">
+            <summary>
+            Disposable generic disable able async command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync`1.#ctor(System.Func{`0,System.Boolean},System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync`1.CanExecuteAsync(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync`1.ExecuteAsync(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandDisableAbleAsync`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversible">
+            <summary>
+            Lightweight reversible command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandReversible.#ctor(System.Action{System.Object},System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversible.Execute(System.Object)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversible.Reverse(System.Object)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversible.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversible`1">
+            <summary>
+            Lightweight reversible generic command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandReversible`1.#ctor(System.Action{`0},System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversible`1.Execute(`0)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversible`1.Reverse(`0)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversible`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversibleAndDisableAble">
+            <summary>
+            Lightweight command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble.#ctor(System.Func{System.Object,System.Boolean},System.Action{System.Object},System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble.CanExecute(System.Object)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble.Execute(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble.Reverse(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversibleAndDisableAble`1">
+            <summary>
+            Lightweight generic command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble`1.#ctor(System.Func{`0,System.Boolean},System.Action{`0},System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble`1.CanExecute(`0)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble`1.Execute(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble`1.Reverse(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAble`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversibleAndDisableAbleAsync">
+            <summary>
+            Lightweight async command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync.#ctor(System.Func{System.Object,System.Boolean},System.Action{System.Object},System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync.CanExecuteAsync(System.Object)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync.ExecuteAsync(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync.ReverseAsync(System.Object)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversibleAndDisableAbleAsync`1">
+            <summary>
+            Lightweight generic async command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync`1.#ctor(System.Func{`0,System.Boolean},System.Action{`0},System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync`1.CanExecuteAsync(`0)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync`1.ExecuteAsync(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync`1.ReverseAsync(`0)">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAndDisableAbleAsync`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversibleAsync">
+            <summary>
+            Lightweight reversible async command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync.#ctor(System.Action{System.Object},System.Action{System.Object})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync.ExecuteAsync(System.Object)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync.ReverseAsync(System.Object)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.CommandReversibleAsync`1">
+            <summary>
+            Lightweight reversible generic async command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync`1.#ctor(System.Action{`0},System.Action{`0})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync`1.ExecuteAsync(`0)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync`1.ReverseAsync(`0)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.CommandReversibleAsync`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.Command">
+            <summary>
+            Lightweight disposable multi parameter command.
+            Just has the execute functionality.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.Command.#ctor(System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.Command.Execute(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException"/>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.Command.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.Command`1">
+            <summary>
+            Lightweight generic multi parameter command.
+            Just has the execute functionality.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.Command`1.#ctor(System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.Command`1.Execute(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException"/>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.Command`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandAsync">
+            <summary>
+            Lightweight multi parameter command.
+            Just has the execute functionality.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandAsync.#ctor(System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandAsync.ExecuteAsync(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandAsync.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandAsync`1">
+            <summary>
+            Lightweight multi parameter generic command.
+            Just has the execute functionality.
+            </summary>
+            <typeparam name="T"><inheritdoc /></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandAsync`1.#ctor(System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandAsync`1.ExecuteAsync(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandAsync`1.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandDisableAble">
+            <summary>
+            Disposable multi parameter command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble.#ctor(System.Func{System.Object[],System.Boolean},System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble.CanExecute(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble.Execute(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandDisableAble`1">
+            <summary>
+            Disposable multi parameter generic command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble`1.#ctor(System.Func{`0[],System.Boolean},System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble`1.CanExecute(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble`1.Execute(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAble`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandDisableAbleAsync">
+            <summary>
+            Disposable multi parameter async command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync.#ctor(System.Func{System.Object[],System.Boolean},System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync.CanExecuteAsync(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync.ExecuteAsync(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandDisableAbleAsync`1">
+            <summary>
+            Disposable multi parameter generic async command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync`1.#ctor(System.Func{`0[],System.Boolean},System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync`1.CanExecuteAsync(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync`1.ExecuteAsync(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandDisableAbleAsync`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversible">
+            <summary>
+            Lightweight reversible multi parameter command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible.#ctor(System.Action{System.Object[]},System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible.Execute(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible.Reverse(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversible`1">
+            <summary>
+            Lightweight reversible multi parameter generic command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible`1.#ctor(System.Action{`0[]},System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible`1.Execute(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible`1.Reverse(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversible`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversibleAndDisableAble">
+            <summary>
+            Multi parameter command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble.#ctor(System.Func{System.Object[],System.Boolean},System.Action{System.Object[]},System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble.CanExecute(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble.Execute(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble.Reverse(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversibleAndDisableAble`1">
+            <summary>
+            Multi parameter generic command that can be
+            disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble`1.#ctor(System.Func{`0[],System.Boolean},System.Action{`0[]},System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble`1.CanExecute(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble`1.Execute(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble`1.Reverse(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAble`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync">
+            <summary>
+            Multi parameter async command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync.#ctor(System.Func{System.Object[],System.Boolean},System.Action{System.Object[]},System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync.CanExecuteAsync(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync.ExecuteAsync(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync.ReverseAsync(System.Object[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync`1">
+            <summary>
+            Multi parameter generic async command
+            that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync`1.#ctor(System.Func{`0[],System.Boolean},System.Action{`0[]},System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync`1.CanExecuteAsync(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync`1.ExecuteAsync(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync`1.ReverseAsync(`0[])">
+            <inheritdoc />
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAndDisableAbleAsync`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversibleAsync">
+            <summary>
+            Lightweight reversible multi parameter async command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync.#ctor(System.Action{System.Object[]},System.Action{System.Object[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync.ExecuteAsync(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync.ReverseAsync(System.Object[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.MultiParameters.CommandReversibleAsync`1">
+            <summary>
+            Lightweight reversible multi parameter generic async command.
+            </summary>
+            <typeparam name="T"><inheritdoc/></typeparam>
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync`1.#ctor(System.Action{`0[]},System.Action{`0[]})">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync`1.ExecuteAsync(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync`1.ReverseAsync(`0[])">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentException" />
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.MultiParameters.CommandReversibleAsync`1.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.Command">
+            <summary>
+            Lightweight disposable parameterless command.
+            Just has the execute functionality.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.Command.#ctor(System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.Command.Execute">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.Command.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandAsync">
+            <summary>
+            Lightweight parameterless async command.
+            Just has the execute functionality.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandAsync.#ctor(System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandAsync.ExecuteAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandAsync.Dispose(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandDisableAble">
+            <summary>
+            Lightweight disposable command.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAble.#ctor(System.Func{System.Boolean},System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAble.CanExecute">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAble.Execute">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAble.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandDisableAbleAsync">
+            <summary>
+            Disposable parameterless async command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAbleAsync.#ctor(System.Func{System.Boolean},System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAbleAsync.CanExecuteAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAbleAsync.ExecuteAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandDisableAbleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandReversible">
+            <summary>
+            Lightweight reversible command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversible.#ctor(System.Action,System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversible.Execute">
+            <inheritdoc/>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversible.Reverse">
+            <inheritdoc/>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversible.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandReversibleAndDisableAble">
+            <summary>
+            Lightweight command that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAble.#ctor(System.Func{System.Boolean},System.Action,System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAble.CanExecute">
+            <inheritdoc/>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAble.Execute">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAble.Reverse">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAble.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandReversibleAndDisableAbleAsync">
+            <summary>
+            Lightweight parameterless async command
+            that can be disable and reverse.
+            Implements <see cref="T:System.Windows.Input.ICommand"/>
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAbleAsync.#ctor(System.Func{System.Boolean},System.Action,System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="canExecuteAction">Function that indicates
+            whether or not the command can be executed.
+            </param>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAbleAsync.CanExecuteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAbleAsync.ExecuteAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAbleAsync.ReverseAsync">
+            <inheritdoc />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAndDisableAbleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Murk.Command.Parameterless.CommandReversibleAsync">
+            <summary>
+            Lightweight reversible parameterless async command.
+            </summary>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAsync.#ctor(System.Action,System.Action)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="actionToExecute">The command to be executed.
+            </param>
+            <param name="undoAction">The undo command operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException" />
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAsync.ExecuteAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAsync.ReverseAsync">
+            <inheritdoc/>
+        </member>
+        <member name="M:Murk.Command.Parameterless.CommandReversibleAsync.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

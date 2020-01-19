@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Murk._PatternName_.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:Murk._PatternName_.ITemplate">
+            <summary>
+            An example interface.
+            </summary>
+        </member>
+        <member name="M:Murk._PatternName_.ITemplate.SayHello(System.String)">
+            <summary>
+            Logs a message using the given <paramref name="name"/>.
+            </summary>
+            <param name="name">Name to be use in the message.</param>
+            <returns>True/False</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Murk._PatternName_.Implementations</name>
+    </assembly>
+    <members>
+        <member name="T:Murk._PatternName_.Template">
+            <summary>
+            Implementing class example.
+            </summary>
+        </member>
+        <member name="M:Murk._PatternName_.Template.#ctor(System.String)">
+            <summary>
+            Default constructor.
+            </summary>
+            <param name="messageBody">Message body to be display on debug
+            console.</param>
+            <exception cref="T:System.ArgumentNullException" />
+            <exception cref="T:System.ArgumentException" />
+        </member>
+        <member name="M:Murk._PatternName_.Template.SayHello(System.String)">
+            <inheritdoc/>
+            <exception cref="T:System.ArgumentNullException" />
+            <exception cref="T:System.ArgumentException" />
+        </member>
+        <member name="M:Murk._PatternName_.Template.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

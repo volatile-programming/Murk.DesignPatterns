@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Murk._PatternName_.BaseClasses</name>
+    </assembly>
+    <members>
+        <member name="T:Murk._PatternName_.BaseTemplate">
+            <summary>
+            Base class example.
+            </summary>
+        </member>
+        <member name="M:Murk._PatternName_.BaseTemplate.SayHello(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>0.0.1</Version>
+    <Authors>jerajo</Authors>
+    <Company>TEXOIDER</Company>
+    <Description>A cross cutting consern library which just provides interfaces and base classes for the command design patterns.</Description>
+    <Copyright>MIT</Copyright>
+    <RepositoryType>NuGet</RepositoryType>
+    <PackageTags>Desing Paterns;Cross Cutting Concern</PackageTags>
+    <PackageReleaseNotes>Demo Release v0.0.1
+
+Interfaces and base classes for the command desgn pattern added.</PackageReleaseNotes>
+    <NeutralLanguage>English</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\Command\Murk.Command.BaseClasses\Murk.Command.BaseClasses.xml</DocumentationFile>
+    <OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Murk.Common\Murk.Common.csproj" />
+    <ProjectReference Include="..\Murk.Command.Interfaces\Murk.Command.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>
