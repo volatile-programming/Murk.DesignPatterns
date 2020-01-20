@@ -7,8 +7,8 @@
 		<Company>TEXOIDER</Company>
 		<Description>A cross cutting consern library which just provides interfaces and base classes for the _PatternName_ design patterns.</Description>
 		<Copyright>MIT</Copyright>
-		<PackageProjectUrl></PackageProjectUrl>
-		<PackageIcon>Desing Paterns;CLEAN;Clean Architecture;SOLID;Cross Cutting Concern</PackageIcon>
+		<PackageProjectUrl>https://github.com/Jerajo/Murk.DesignPatterns</PackageProjectUrl>
+		<PackageIcon></PackageIcon>
 		<PackageIconUrl />
 		<RepositoryType>NuGet</RepositoryType>
 		<PackageTags>Desing Paterns, Cross Cutting Concern</PackageTags>
@@ -18,13 +18,8 @@ Interfaces and abstract classes for the _PatternName_ desgn pattern added.</Pack
 		<NeutralLanguage>English</NeutralLanguage>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile></DocumentationFile>
-		<OutputPath></OutputPath>
-	</PropertyGroup>
-
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Murk.Common\Murk.Common.csproj" />
-	  <ProjectReference Include="..\Murk._PatternName_.Interfaces\Murk._PatternName_.Interfaces.csproj" />
+		<ProjectReference Include="..\..\..\Murk.Common\Murk.Common.csproj" />
+		<ProjectReference Include="..\Murk._PatternName_.Interfaces\Murk._PatternName_.Interfaces.csproj" />
 	</ItemGroup>
 </Project>

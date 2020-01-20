@@ -1,29 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>jerajo</Authors>
-    <Company>TEXOIDER</Company>
-    <Description>A cross cutting consern library which provides interfaces, base classes and generic implemetations of the most use design patterns.</Description>
-    <RepositoryType>NuGet</RepositoryType>
-    <PackageTags>Desing Paterns;Cross Cutting Concern</PackageTags>
-    <AssemblyVersion>0.0.1.0</AssemblyVersion>
-    <FileVersion>0.0.1.0</FileVersion>
-    <NeutralLanguage>en</NeutralLanguage>
-    <PackageReleaseNotes>Demo Release v0.0.1
+	<PropertyGroup>
+		<TargetFramework>netstandard1.0</TargetFramework>
+		<Version>0.0.1</Version>
+		<Authors>jerajo</Authors>
+		<Company>TEXOIDER</Company>
+		<Description>A cross cutting consern library which provides interfaces, base classes and generic implemetations of the most use design patterns.</Description>
+		<Copyright>MIT</Copyright>
+		<PackageProjectUrl>https://github.com/Jerajo/Murk.DesignPatterns</PackageProjectUrl>
+		<PackageIcon></PackageIcon>
+		<PackageIconUrl />
+		<RepositoryType>NuGet</RepositoryType>
+		<PackageTags>Desing Paterns, Cross Cutting Concern</PackageTags>
+		<PackageReleaseNotes>Demo Release v0.0.1
 
 Interfaces, base classes and generic implementation of the command desgn pattern added.</PackageReleaseNotes>
-    <Copyright>MIT</Copyright>
-    <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>Clean Design Patterns Sign Key.pfx</AssemblyOriginatorKeyFile>
-    <RunAnalyzersDuringLiveAnalysis>false</RunAnalyzersDuringLiveAnalysis>
-    <Version>0.0.1</Version>
-    <Platforms>AnyCPU;x86</Platforms>
-  </PropertyGroup>
+		<NeutralLanguage>English</NeutralLanguage>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Design Patterns\Command\Murk.Command.Implementations\Murk.Command.Implementations.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Design Patterns\Command\Murk.Command.Implementations\Murk.Command.Implementations.csproj" />
+	</ItemGroup>
 
 </Project>
