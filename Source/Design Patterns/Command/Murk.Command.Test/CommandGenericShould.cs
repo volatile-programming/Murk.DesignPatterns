@@ -1,5 +1,5 @@
-using Murk.Command;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Murk.Command;
 using System;
 
 namespace Murk.Test.Command

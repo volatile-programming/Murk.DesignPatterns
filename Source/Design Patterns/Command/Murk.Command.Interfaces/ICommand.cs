@@ -3,7 +3,7 @@
 	/// <summary>
 	/// A interface that represents a simple command.
 	/// </summary>
-	public interface ICommand : System.IDisposable
+	public interface ICommand
 	{
 		/// <summary>
 		/// The main command concern to be executed when needed.
@@ -16,7 +16,7 @@
 	/// A generic interface that represents a simple command.
 	/// </summary>
 	/// <typeparam name="T">Parameter type.</typeparam>
-	public interface ICommand<in T> : System.IDisposable
+	public interface ICommand<in T>
 	{
 		/// <summary>
 		/// The main command concern to be executed when needed.

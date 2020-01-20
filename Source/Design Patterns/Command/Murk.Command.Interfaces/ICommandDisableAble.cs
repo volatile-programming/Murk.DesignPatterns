@@ -5,8 +5,7 @@
 	/// Implements <see cref="System.Windows.Input.ICommand"/>
 	/// </summary>
 	public interface ICommandDisableAble :
-		System.Windows.Input.ICommand,
-		System.IDisposable {}
+		System.Windows.Input.ICommand {}
 
 	/// <summary>
 	/// A generic interface that represents a disable able command.

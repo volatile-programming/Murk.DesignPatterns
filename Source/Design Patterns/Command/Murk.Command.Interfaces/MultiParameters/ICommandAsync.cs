@@ -3,10 +3,9 @@
 namespace Murk.Command.MultiParameters
 {
 	/// <summary>
-	/// A generic interface that represents a async Command.
+	/// A interface that represents a async Command.
 	/// </summary>
-	/// <typeparam name="T">Parameter type.</typeparam>
-	public interface ICommandAsync : System.IDisposable
+	public interface ICommandAsync
 	{
 		/// <summary>
 		/// The main command concern to be executed when needed.
@@ -20,7 +19,7 @@ namespace Murk.Command.MultiParameters
 	/// multi parameter command.
 	/// </summary>
 	/// <typeparam name="T">Parameters type.</typeparam>
-	public interface ICommandAsync<in T> : System.IDisposable
+	public interface ICommandAsync<in T>
 	{
 		/// <summary>
 		/// The main command concern to be executed when needed.

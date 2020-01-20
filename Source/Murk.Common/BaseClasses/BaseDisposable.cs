@@ -8,7 +8,7 @@
 		/// <summary>
 		/// Indicate whether the object is disposing or not.
 		/// </summary>
-		protected bool IsDisposing { get; private set; }
+		protected bool IsDisposing { get; set; }
 
 		/// <summary>
 		/// Dispose object dependencies an events subscribers.
