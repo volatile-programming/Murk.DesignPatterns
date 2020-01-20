@@ -19,8 +19,8 @@ Interfaces and abstract classes for the _PatternName_ desgn pattern added.</Pack
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\New design pattern template\Murk._PatternName_.BaseClasses\Murk._PatternName_.BaseClasses.xml</DocumentationFile>
-		<OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+		<DocumentationFile></DocumentationFile>
+		<OutputPath></OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>

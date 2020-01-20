@@ -20,8 +20,8 @@ Interfaces, base classes and generic implementation of the command desgn pattern
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\Command\Murk.Command.Implementations\Murk.Command.Implementations.xml</DocumentationFile>
-		<OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+		<DocumentationFile></DocumentationFile>
+		<OutputPath></OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>

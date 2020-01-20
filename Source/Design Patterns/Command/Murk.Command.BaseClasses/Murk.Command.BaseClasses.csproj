@@ -17,8 +17,8 @@ Interfaces and base classes for the command desgn pattern added.</PackageRelease
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\Command\Murk.Command.BaseClasses\Murk.Command.BaseClasses.xml</DocumentationFile>
-    <OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+    <DocumentationFile></DocumentationFile>
+    <OutputPath></OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

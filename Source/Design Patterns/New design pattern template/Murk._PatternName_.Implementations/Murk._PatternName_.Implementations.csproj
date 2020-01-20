@@ -19,8 +19,8 @@ Interfaces, abstract classes and generic implementation for the _PatternName_ de
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\New design pattern template\Murk._PatternName_.Implementations\Murk._PatternName_.Implementations.xml</DocumentationFile>
-		<OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+		<DocumentationFile></DocumentationFile>
+		<OutputPath></OutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>

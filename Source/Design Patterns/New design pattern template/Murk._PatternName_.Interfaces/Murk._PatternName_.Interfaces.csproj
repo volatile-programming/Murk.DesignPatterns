@@ -19,7 +19,7 @@ Interfaces for the _PatternName_ desgn pattern added.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<DocumentationFile>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Source\Design Patterns\New design pattern template\Murk._PatternName_.Interfaces\Murk._PatternName_.Interfaces.xml</DocumentationFile>
-		<OutputPath>C:\Users\Jesse\Repositorios\NuGet\Murk\Murk Design Patterns\Documents\</OutputPath>
+		<DocumentationFile></DocumentationFile>
+		<OutputPath></OutputPath>
 	</PropertyGroup>
 </Project>
