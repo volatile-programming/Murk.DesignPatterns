@@ -1,4 +1,4 @@
-﻿namespace Murk.Commons
+﻿namespace Murk.Common
 {
 	/// <summary>
 	/// A interface that represents a disposable and

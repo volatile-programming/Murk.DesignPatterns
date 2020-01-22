@@ -1,4 +1,4 @@
-﻿namespace Murk.Commons
+﻿namespace Murk.Common
 {
 	/// <summary>
 	/// A base class for disposable objects.

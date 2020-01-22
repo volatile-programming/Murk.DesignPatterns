@@ -1,17 +1,14 @@
-﻿using Murk.Common.Extensions;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Murk.Commons
+namespace Murk.Common
 {
 	public class Guard
 	{
-		internal Guard() {}
+		private Guard() {}
 
-		private static Guard _instance;
-		public static Guard Against =>
-			_instance ?? (_instance = new Guard());
+		public static Guard Against { get; } = new Guard();
 
 		public void Null(object parameter, string parameterName)
 		{
@@ -35,7 +32,7 @@ namespace Murk.Commons
 		{
 			Null(parameter, parameterName);
 
-			if (!parameter.Any())
+			if (!Extensions.IEnumerableExtensions.Any(parameter))
 				throw new System.ArgumentException(
 					"None arguments were given.",
 					parameterName);

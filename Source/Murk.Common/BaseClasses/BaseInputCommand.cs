@@ -1,4 +1,4 @@
-﻿namespace Murk.Commons
+﻿namespace Murk.Common
 {
 	/// <summary>
 	/// Base class for disposable disable able commands.
