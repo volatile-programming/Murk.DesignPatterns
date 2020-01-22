@@ -1,14 +1,12 @@
 ﻿using System;
 
-namespace Murk.Commons
+namespace Murk.Common
 {
 	public class Cast
 	{
-		internal Cast() {}
+		private Cast(){}
 
-		private static Cast _instance;
-		public static Cast Type =>
-			_instance ?? (_instance = new Cast());
+		public static Cast Type { get; } = new Cast();
 
 		public T Any<T>(object objectToCast)
 		{

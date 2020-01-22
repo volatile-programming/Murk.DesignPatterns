@@ -1,5 +1,5 @@
-﻿using Murk.Command.MultiParameters;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Murk.Command.MultiParameters;
 using System;
 using System.Threading.Tasks;
 
@@ -61,7 +61,7 @@ namespace Murk.Test.Command.MultiParameters
 		public void Execute_GuardsAgainstEmpty()
 		{
 			Assert.ThrowsExceptionAsync<ArgumentException>(
-				() => _sut.ExecuteAsync(Array.Empty<object>()));
+				() => _sut.ExecuteAsync(new object[] {}));
 		}
 		#endregion
 

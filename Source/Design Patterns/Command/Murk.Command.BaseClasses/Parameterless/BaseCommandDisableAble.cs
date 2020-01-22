@@ -1,11 +1,13 @@
-﻿namespace Murk.Command.Parameterless
+﻿using Murk.Common;
+
+namespace Murk.Command.Parameterless
 {
 	/// <summary>
 	/// Base class for disable able commands.
 	/// Implements <see cref="System.Windows.Input.ICommand" />.
 	/// </summary>
 	public abstract class BaseCommandDisableAble :
-		Commons.BaseInputCommand,
+		BaseInputCommand,
 		ICommandDisableAble
 	{
 		/// <inheritdoc/>

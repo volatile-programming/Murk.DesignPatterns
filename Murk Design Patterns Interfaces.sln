@@ -7,15 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{1F787D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design Patterns", "Design Patterns", "{712BDD08-B672-46C1-9FC5-BA0494F5685A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Command", "Command", "{3DD696EA-9899-455D-9DE2-561A77150C70}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Murk.Command.Interfaces", "Source\Design Patterns\Command\Murk.Command.Interfaces\Murk.Command.Interfaces.csproj", "{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Murk.Common", "Source\Murk.Common\Murk.Common.csproj", "{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Murk.DesignPatterns.Interfaces", "Source\Boundles\Murk.DesignPatterns.Interfaces\Murk.DesignPatterns.Interfaces.csproj", "{F07D3CE1-C6EF-4AD0-A542-9EA729DAD4A3}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Murk.Common", "Source\Murk.Common\Murk.Common.shproj", "{C4ED04EF-9B39-43B5-9F48-FBD425C01EF8}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Source\Murk.Common\Murk.Common.projitems*{c4ed04ef-9b39-43b5-9f48-fbd425c01ef8}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
@@ -25,20 +26,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Debug|x86.ActiveCfg = Debug|x86
-		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Debug|x86.Build.0 = Debug|x86
+		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Debug|x86.Build.0 = Debug|Any CPU
 		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Release|x86.ActiveCfg = Release|x86
-		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Release|x86.Build.0 = Release|x86
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Debug|x86.ActiveCfg = Debug|x86
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Debug|x86.Build.0 = Debug|x86
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Release|x86.ActiveCfg = Release|x86
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898}.Release|x86.Build.0 = Release|x86
+		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Release|x86.ActiveCfg = Release|Any CPU
+		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8}.Release|x86.Build.0 = Release|Any CPU
 		{F07D3CE1-C6EF-4AD0-A542-9EA729DAD4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F07D3CE1-C6EF-4AD0-A542-9EA729DAD4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07D3CE1-C6EF-4AD0-A542-9EA729DAD4A3}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -52,9 +45,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3DD696EA-9899-455D-9DE2-561A77150C70} = {712BDD08-B672-46C1-9FC5-BA0494F5685A}
-		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8} = {3DD696EA-9899-455D-9DE2-561A77150C70}
-		{4852E4B9-6F9A-4E19-B7F9-3E3E7D293898} = {1F787D40-E978-48B7-B302-26F9B69BD182}
+		{A892D702-7245-4C49-AFD5-BDBF0FE0A0B8} = {712BDD08-B672-46C1-9FC5-BA0494F5685A}
+		{C4ED04EF-9B39-43B5-9F48-FBD425C01EF8} = {1F787D40-E978-48B7-B302-26F9B69BD182}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CFC926C-BD25-448D-853B-D8A38A41E9E6}

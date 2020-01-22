@@ -1,25 +1,33 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>netstandard1.0</TargetFramework>
-		<Version>0.0.1</Version>
-		<Authors>jerajo</Authors>
-		<Company>TEXOIDER</Company>
-		<Description>A cross cutting consern library which just provides interfaces of the most use design patterns.</Description>
-		<Copyright>MIT</Copyright>
+		<Version>0.0.2-alpha</Version>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+		<PackageId>Murk.DesignPatterns.Interfaces</PackageId>
+		<Title>Murk.DesignPatterns.Interfaces</Title>
+		<Description>A cross cutting concern library which just provides interfaces of the most use design patterns.</Description>
 		<PackageProjectUrl>https://github.com/Jerajo/Murk.DesignPatterns</PackageProjectUrl>
-		<PackageIcon></PackageIcon>
+		<RepositoryUrl>https://github.com/Jerajo/Murk.DesignPatterns.git</RepositoryUrl>
+		<PackageTags>design patterns cross cutting concern interfaces</PackageTags>
+		<PackageReleaseNotes>Demo Release v0.0.2
+Interfaces, base classes and generic implementation of the command design pattern added.</PackageReleaseNotes>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>logo x64.png</PackageIcon>
 		<PackageIconUrl />
-		<RepositoryType>NuGet</RepositoryType>
-		<PackageTags>Desing Paterns, Cross Cutting Concern</PackageTags>
-		<PackageReleaseNotes>Demo Release v0.0.1
-
-Interfaces, base classes and generic implementation of the command desgn pattern added.</PackageReleaseNotes>
-		<NeutralLanguage>English</NeutralLanguage>
+		<Authors>Jesse Jose (@jerajo)</Authors>
+		<Company>TEXOIDER</Company>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\Design Patterns\Command\Murk.Command.Interfaces\Murk.Command.Interfaces.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\..\Documents\logo x64.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>
