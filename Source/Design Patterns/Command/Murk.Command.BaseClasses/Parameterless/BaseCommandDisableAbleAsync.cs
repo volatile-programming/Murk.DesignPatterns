@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Murk.Common;
+using System.Threading.Tasks;
 
 namespace Murk.Command.Parameterless
 {
@@ -7,7 +8,7 @@ namespace Murk.Command.Parameterless
 	/// Implements <see cref="System.Windows.Input.ICommand" />.
 	/// </summary>
 	public abstract class BaseCommandDisableAbleAsync :
-		Commons.BaseInputCommand,
+		BaseInputCommand,
 		ICommandDisableAbleAsync
 	{
 		/// <inheritdoc/>
