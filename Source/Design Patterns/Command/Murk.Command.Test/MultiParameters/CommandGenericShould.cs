@@ -60,7 +60,7 @@ namespace Murk.Test.Command.MultiParameters
 		public void Execute_GuardsAgainstEmpty()
 		{
 			Assert.ThrowsException<ArgumentException>(
-				() => _sut.Execute(Array.Empty<int>()));
+				() => _sut.Execute(new int[] {}));
 		}
 		#endregion
 

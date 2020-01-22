@@ -79,10 +79,10 @@ namespace Murk.Test.Command.MultiParameters
 		public void CanExecute_GuardsAgainstEmpty()
 		{
 			Assert.ThrowsExceptionAsync<ArgumentException>(
-				() => _sut.CanExecuteAsync(Array.Empty<object>()));
+				() => _sut.CanExecuteAsync(new object[] {}));
 
 			Assert.ThrowsException<ArgumentException>(
-				() => _sut.CanExecute(Array.Empty<int>()));
+				() => _sut.CanExecute(new int[] {}));
 		}
 
 		[TestMethod]
@@ -136,10 +136,10 @@ namespace Murk.Test.Command.MultiParameters
 		public void Execute_GuardsAgainstEmpty()
 		{
 			Assert.ThrowsExceptionAsync<ArgumentException>(
-				() => _sut.ExecuteAsync(Array.Empty<object>()));
+				() => _sut.ExecuteAsync(new object[] {}));
 
 			Assert.ThrowsException<ArgumentException>(
-				() => _sut.Execute(Array.Empty<int>()));
+				() => _sut.Execute(new int[] {}));
 		}
 		#endregion
 

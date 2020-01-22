@@ -61,7 +61,7 @@ namespace Murk.Test.Command.MultiParameters
 		public void Execute_GuardsAgainstEmpty()
 		{
 			Assert.ThrowsExceptionAsync<ArgumentException>(
-				() => _sut.ExecuteAsync(Array.Empty<int>()));
+				() => _sut.ExecuteAsync(new int[] {}));
 		}
 		#endregion
 
