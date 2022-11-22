@@ -5,15 +5,6 @@ using System;
 namespace Murk.DesignPatterns.BaseClasses.Command
 {
     /// <summary>
-    /// Base class for disable able commands.
-    /// Implements <see cref="System.Windows.Input.ICommand" />.
-    /// </summary>
-    public abstract class BaseCommandDisableAble :
-        BaseInputCommand,
-        ICommandDisableAble
-    { }
-
-    /// <summary>
     /// Base class for disable able generic commands.
     /// Implements <see cref="System.Windows.Input.ICommand" />.
     /// </summary>

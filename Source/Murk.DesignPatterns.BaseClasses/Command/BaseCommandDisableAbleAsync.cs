@@ -6,49 +6,6 @@ using System.Threading.Tasks;
 namespace Murk.DesignPatterns.BaseClasses.Command
 {
     /// <summary>
-    /// Base class for disable able async commands.
-    /// Implements <see cref="System.Windows.Input.ICommand" />.
-    /// </summary>
-    public abstract class BaseCommandDisableAbleAsync :
-        BaseInputCommand,
-        ICommandDisableAbleAsync
-    {
-        /// <inheritdoc/>
-        public abstract Task<bool> CanExecuteAsync(object parameter);
-
-        /// <inheritdoc/>
-        public abstract Task ExecuteAsync(object parameter);
-
-        #region Interface Methods
-        /// <inheritdoc/>
-        /// <exception cref="ArgumentNullException" />
-        /// <exception cref="InvalidCastException" />
-        public override bool CanExecute(object parameter)
-        {
-            Guard.Against.Null(parameter, nameof(parameter));
-
-            if (IsDisposing)
-                return false;
-
-            return CanExecuteAsync(parameter).Result;
-        }
-
-        /// <inheritdoc/>
-        /// <exception cref="ArgumentNullException" />
-        /// <exception cref="InvalidCastException" />
-        public override void Execute(object parameter)
-        {
-            Guard.Against.Null(parameter, nameof(parameter));
-
-            if (IsDisposing || !CanExecuteAsync(parameter).Result)
-                return;
-
-            ExecuteAsync(parameter).Wait();
-        }
-        #endregion
-    }
-
-    /// <summary>
     /// Base class for generic disable able async commands.
     /// Implements <see cref="System.Windows.Input.ICommand" />.
     /// </summary>

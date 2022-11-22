@@ -1,15 +1,6 @@
 ﻿namespace Murk.DesignPatterns.Interfaces.Command
 {
     /// <summary>
-    /// A interface that represents a async reversible
-    /// and disable able Command.
-    /// </summary>
-    public interface ICommandReversibleAndDisableAbleAsync :
-        ICommandDisableAbleAsync,
-        ICommandReversibleAsync
-    { }
-
-    /// <summary>
     /// A generic interface that represents a async reversible
     /// and disable able Command.
     /// </summary>

@@ -1,14 +1,6 @@
 ﻿namespace Murk.DesignPatterns.Interfaces.Command
 {
     /// <summary>
-    /// A interface that represents a disable able command.
-    /// Implements <see cref="System.Windows.Input.ICommand"/>
-    /// </summary>
-    public interface ICommandDisableAble :
-        System.Windows.Input.ICommand
-    { }
-
-    /// <summary>
     /// A generic interface that represents a disable able command.
     /// Implements <see cref="System.Windows.Input.ICommand"/>
     /// </summary>
