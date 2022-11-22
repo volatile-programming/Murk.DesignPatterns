@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<Version>0.0.2-alpha</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+		<TargetFrameworks>net46;net6;net7;netcoreapp3.1;netstandard1.1</TargetFrameworks>
 		<PackageId>Murk.Command.Implementations</PackageId>
 		<Title>Murk.Command.Implementations</Title>
 		<Description>A cross cutting concern library which provides interfaces, base classes and generic implementations for the command design patterns.</Description>

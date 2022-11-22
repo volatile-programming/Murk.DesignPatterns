@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7EF81863-20E1-4B7C-995A-13C82739B2BE}"
 EndProject
@@ -30,9 +30,6 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Murk.Common", "Source\Murk.Common\Murk.Common.shproj", "{C4ED04EF-9B39-43B5-9F48-FBD425C01EF8}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Source\Murk.Common\Murk.Common.projitems*{c4ed04ef-9b39-43b5-9f48-fbd425c01ef8}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
@@ -113,5 +110,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CFC926C-BD25-448D-853B-D8A38A41E9E6}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Source\Murk.Common\Murk.Common.projitems*{c4ed04ef-9b39-43b5-9f48-fbd425c01ef8}*SharedItemsImports = 13
+		Source\Murk.Common\Murk.Common.projitems*{c7d260e2-7b39-4074-a0fe-f926c0b33fa3}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
