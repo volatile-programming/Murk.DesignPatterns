@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<Version>0.0.2-alpha</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetFrameworks>netstandard1.1;net45</TargetFrameworks>
+		<TargetFrameworks>net46;net6;net7;netcoreapp3.1;netstandard1.1</TargetFrameworks>
 		<PackageId>Murk.DesignPatterns.Interfaces</PackageId>
 		<Title>Murk.DesignPatterns.Interfaces</Title>
 		<Description>A cross cutting concern library which just provides interfaces of the most use design patterns.</Description>

@@ -13,7 +13,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)BaseClasses\BaseInputCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\IEnumerableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IInputCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Cast.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Guard.cs" />
   </ItemGroup>
