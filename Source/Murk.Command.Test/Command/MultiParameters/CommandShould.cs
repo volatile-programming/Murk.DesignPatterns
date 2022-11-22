@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Clean = Murk.DesignPatterns.Command.MultiParameter;
+using Clean = Murk.DesignPatterns.Command.MultiParameters;
 
 namespace Murk.Command.Test.Command.MultiParameters
 {
@@ -9,7 +9,7 @@ namespace Murk.Command.Test.Command.MultiParameters
     {
         #region Attributes
         private int _actualCount;
-        private DesignPatterns.Command.MultiParameter.Command _sut;
+        private Clean.Command _sut;
         private Action<object[]> _actionToExecute;
         private readonly object[] _parameters = { 1, 2f, 3d, '¡', "!" };
         #endregion

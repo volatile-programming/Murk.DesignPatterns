@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Murk.DesignPatterns.Command.MultiParameter;
+using Murk.DesignPatterns.Command.MultiParameters;
 using System;
 using System.Threading.Tasks;
 

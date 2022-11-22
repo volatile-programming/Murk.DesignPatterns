@@ -3,7 +3,7 @@ using Murk.DesignPatterns.BaseClasses.Command.MultiParameters;
 using System;
 using System.Threading.Tasks;
 
-namespace Murk.DesignPatterns.Command.MultiParameter
+namespace Murk.DesignPatterns.Command.MultiParameters
 {
     /// <summary>
     /// Lightweight multi parameter command.

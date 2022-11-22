@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Murk.DesignPatterns.Command.MultiParameter;
+using Murk.DesignPatterns.Command.MultiParameters;
 
 namespace Murk.Command.Test.Command.MultiParameters
 {

@@ -1,19 +1,19 @@
 ﻿using Murk.Common;
 using Murk.DesignPatterns.BaseClasses.Command.MultiParameters;
 using System;
+using System.Threading.Tasks;
 
-namespace Murk.DesignPatterns.Command.MultiParameter
+namespace Murk.DesignPatterns.Command.MultiParameters
 {
     /// <summary>
-    /// Multi parameter command that can be disable and reverse.
-    /// Implements <see cref="System.Windows.Input.ICommand"/>
+    /// Disposable multi parameter async command.
     /// </summary>
-    public class CommandReversibleAndDisableAble : BaseCommandReversibleAndDisableAble
+    public class CommandDisableAbleAsync :
+        BaseCommandDisableAbleAsync
     {
         #region Attributes
         private Func<object[], bool> _canExecuteAction;
         private Action<object[]> _actionToExecute;
-        private Action<object[]> _undoAction;
         #endregion
 
         /// <summary>
@@ -24,61 +24,47 @@ namespace Murk.DesignPatterns.Command.MultiParameter
         /// </param>
         /// <param name="actionToExecute">The command to be executed.
         /// </param>
-        /// <param name="undoAction">The undo command operation.
-        /// </param>
         /// <exception cref="ArgumentNullException" />
-        public CommandReversibleAndDisableAble(
+        public CommandDisableAbleAsync(
             Func<object[], bool> canExecuteAction,
-            Action<object[]> actionToExecute,
-            Action<object[]> undoAction)
+            Action<object[]> actionToExecute)
         {
             Guard.Against.Null(canExecuteAction, nameof(canExecuteAction));
             Guard.Against.Null(actionToExecute, nameof(actionToExecute));
-            Guard.Against.Null(undoAction, nameof(undoAction));
 
             _canExecuteAction = canExecuteAction;
             _actionToExecute = actionToExecute;
-            _undoAction = undoAction;
         }
 
         #region Interface Methods
-        /// <inheritdoc/>
+        /// <inheritdoc />
         /// <exception cref="ArgumentException" />
         /// <exception cref="ArgumentNullException" />
-        public override bool CanExecute(params object[] parameters)
+        public override Task<bool>
+            CanExecuteAsync(params object[] parameters)
         {
             Guard.Against.NullOrEmpty(parameters, nameof(parameters));
 
             if (IsDisposing)
-                return false;
+                return Task.FromResult(false);
 
-            return _canExecuteAction.Invoke(parameters);
+            return Task.Run(() => _canExecuteAction.Invoke(parameters));
         }
 
         /// <inheritdoc />
         /// <exception cref="ArgumentException" />
         /// <exception cref="ArgumentNullException" />
-        public override void Execute(params object[] parameters)
+        public override Task ExecuteAsync(params object[] parameters)
         {
             Guard.Against.NullOrEmpty(parameters, nameof(parameters));
 
-            if (IsDisposing || !CanExecute(parameters))
-                return;
+            return Task.Run(() =>
+            {
+                if (IsDisposing || !CanExecuteAsync(parameters).Result)
+                    return;
 
-            _actionToExecute.Invoke(parameters);
-        }
-
-        /// <inheritdoc />
-        /// <exception cref="ArgumentException" />
-        /// <exception cref="ArgumentNullException" />
-        public override void Reverse(params object[] parameters)
-        {
-            Guard.Against.NullOrEmpty(parameters, nameof(parameters));
-
-            if (IsDisposing || !CanExecute(parameters))
-                return;
-
-            _undoAction.Invoke(parameters);
+                _actionToExecute.Invoke(parameters);
+            });
         }
         #endregion
 
@@ -89,23 +75,20 @@ namespace Murk.DesignPatterns.Command.MultiParameter
             base.Dispose(isDisposing);
             _canExecuteAction = null;
             _actionToExecute = null;
-            _undoAction = null;
         }
         #endregion
     }
 
     /// <summary>
-    /// Multi parameter generic command that can be
-    /// disable and reverse.
-    /// Implements <see cref="System.Windows.Input.ICommand"/>
+    /// Disposable multi parameter generic async command.
     /// </summary>
     /// <typeparam name="T"><inheritdoc/></typeparam>
-    public class CommandReversibleAndDisableAble<T> : BaseCommandReversibleAndDisableAble<T>
+    public class CommandDisableAbleAsync<T> :
+        BaseCommandDisableAbleAsync<T>
     {
         #region Attributes
         private Func<T[], bool> _canExecuteAction;
         private Action<T[]> _actionToExecute;
-        private Action<T[]> _undoAction;
         #endregion
 
         /// <summary>
@@ -116,61 +99,46 @@ namespace Murk.DesignPatterns.Command.MultiParameter
         /// </param>
         /// <param name="actionToExecute">The command to be executed.
         /// </param>
-        /// <param name="undoAction">The undo command operation.
-        /// </param>
         /// <exception cref="ArgumentNullException" />
-        public CommandReversibleAndDisableAble(
+        public CommandDisableAbleAsync(
             Func<T[], bool> canExecuteAction,
-            Action<T[]> actionToExecute,
-            Action<T[]> undoAction)
+            Action<T[]> actionToExecute)
         {
             Guard.Against.Null(canExecuteAction, nameof(canExecuteAction));
             Guard.Against.Null(actionToExecute, nameof(actionToExecute));
-            Guard.Against.Null(undoAction, nameof(undoAction));
 
             _canExecuteAction = canExecuteAction;
             _actionToExecute = actionToExecute;
-            _undoAction = undoAction;
         }
 
         #region Interface Methods
-        /// <inheritdoc/>
+        /// <inheritdoc />
         /// <exception cref="ArgumentException" />
         /// <exception cref="ArgumentNullException" />
-        public override bool CanExecute(params T[] parameters)
+        public override Task<bool> CanExecuteAsync(params T[] parameters)
         {
             Guard.Against.NullOrEmpty(parameters, nameof(parameters));
 
             if (IsDisposing)
-                return false;
+                return Task.FromResult(false);
 
-            return _canExecuteAction.Invoke(parameters);
+            return Task.Run(() => _canExecuteAction.Invoke(parameters));
         }
 
         /// <inheritdoc />
         /// <exception cref="ArgumentException" />
         /// <exception cref="ArgumentNullException" />
-        public override void Execute(params T[] parameters)
+        public override Task ExecuteAsync(params T[] parameters)
         {
             Guard.Against.NullOrEmpty(parameters, nameof(parameters));
 
-            if (IsDisposing || !CanExecute(parameters))
-                return;
+            return Task.Run(() =>
+            {
+                if (IsDisposing || !CanExecuteAsync(parameters).Result)
+                    return;
 
-            _actionToExecute.Invoke(parameters);
-        }
-
-        /// <inheritdoc />
-        /// <exception cref="ArgumentException" />
-        /// <exception cref="ArgumentNullException" />
-        public override void Reverse(params T[] parameters)
-        {
-            Guard.Against.NullOrEmpty(parameters, nameof(parameters));
-
-            if (IsDisposing || !CanExecute(parameters))
-                return;
-
-            _undoAction.Invoke(parameters);
+                _actionToExecute.Invoke(parameters);
+            });
         }
         #endregion
 
@@ -181,7 +149,6 @@ namespace Murk.DesignPatterns.Command.MultiParameter
             base.Dispose(isDisposing);
             _canExecuteAction = null;
             _actionToExecute = null;
-            _undoAction = null;
         }
         #endregion
     }

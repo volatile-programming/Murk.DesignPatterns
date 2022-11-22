@@ -2,7 +2,7 @@
 using Murk.DesignPatterns.BaseClasses.Command.MultiParameters;
 using System;
 
-namespace Murk.DesignPatterns.Command.MultiParameter
+namespace Murk.DesignPatterns.Command.MultiParameters
 {
     /// <summary>
     /// Disposable multi parameter command.
