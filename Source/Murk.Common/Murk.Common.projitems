@@ -10,10 +10,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BaseClasses\BaseDisposable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BaseClasses\BaseInputCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IInputCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Cast.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\Guard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Guard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
   </ItemGroup>
 </Project>

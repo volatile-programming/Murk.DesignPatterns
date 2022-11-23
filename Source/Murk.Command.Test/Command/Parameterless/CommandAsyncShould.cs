@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Threading.Tasks;
-using Murk.DesignPatterns.Command.Parameterless;
+using Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command.Parameterless
 {

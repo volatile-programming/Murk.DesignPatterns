@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Threading.Tasks;
-using Murk.DesignPatterns.Command.Parameterless;
+using Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command.Parameterless
 {
@@ -45,6 +45,7 @@ namespace Murk.Command.Test.Command.Parameterless
         #endregion
 
         #region Execute
+
         [TestMethod]
         public async Task Execute()
         {
@@ -67,9 +68,11 @@ namespace Murk.Command.Test.Command.Parameterless
             await _sut.ReverseAsync();
             Assert.AreEqual(originalCount, _actualCount);
         }
+
         #endregion
 
         #region Dispose
+
         [TestMethod]
         public void Dispose()
         {
@@ -89,6 +92,7 @@ namespace Murk.Command.Test.Command.Parameterless
             await _sut.ReverseAsync();
             Assert.AreEqual(originalCount, _actualCount);
         }
+
         #endregion
     }
 }

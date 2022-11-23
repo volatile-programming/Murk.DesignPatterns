@@ -30,6 +30,7 @@ namespace Murk.Command.Test.Command
         }
 
         #region Constructor
+
         [TestMethod]
         public void Constructor_GuardsAgainstNull()
         {
@@ -58,21 +59,15 @@ namespace Murk.Command.Test.Command
             _ = new CommandReversibleAndDisableAble<int?>(
                 _canExecuteAction, _actionToExecute, _undoAction);
         }
+
         #endregion
 
         #region Execute
+
         [TestMethod]
         public void CanExecute()
         {
             var actualResult = _sut.CanExecute(1);
-
-            Assert.AreEqual(expected: true, actualResult);
-        }
-
-        [TestMethod]
-        public void CanExecute_ObjectParameter()
-        {
-            var actualResult = _sut.CanExecute(1 as object);
 
             Assert.AreEqual(expected: true, actualResult);
         }
@@ -102,13 +97,6 @@ namespace Murk.Command.Test.Command
         }
 
         [TestMethod]
-        public void CanExecute_ThrowsInvalidCastException()
-        {
-            Assert.ThrowsException<InvalidCastException>(
-                () => _sut.Execute(""));
-        }
-
-        [TestMethod]
         public void Execute()
         {
             var expectedCount = _actualCount;
@@ -120,28 +108,10 @@ namespace Murk.Command.Test.Command
         }
 
         [TestMethod]
-        public void Execute_ObjectParameter()
-        {
-            var expectedCount = _actualCount;
-
-            _sut.Execute(1 as object);
-
-            Assert.AreNotEqual(expectedCount, _actualCount);
-            Assert.IsTrue(expectedCount < _actualCount);
-        }
-
-        [TestMethod]
         public void Execute_GuardsAgainstNull()
         {
             Assert.ThrowsException<ArgumentNullException>(
                 () => _sut.Execute(null));
-        }
-
-        [TestMethod]
-        public void Execute_ThrowsInvalidCastException()
-        {
-            Assert.ThrowsException<InvalidCastException>(
-                () => _sut.Execute(""));
         }
 
         [TestMethod]
@@ -162,9 +132,11 @@ namespace Murk.Command.Test.Command
             Assert.ThrowsException<ArgumentNullException>(
                 () => _sut.Reverse(null));
         }
+
         #endregion
 
         #region Can Execute Changed And Dispose
+
         [TestMethod]
         public void RiseCanExecuteChanged()
         {
@@ -197,18 +169,13 @@ namespace Murk.Command.Test.Command
             _sut.Execute(1);
             Assert.AreEqual(originalCount, _actualCount);
 
-            _sut.Execute(3 as object);
-            Assert.AreEqual(originalCount, _actualCount);
-
             _sut.Reverse(2);
             Assert.AreEqual(originalCount, _actualCount);
 
             bool actualResult = _sut.CanExecute(1);
             Assert.AreEqual(expected: false, actualResult);
-
-            actualResult = _sut.CanExecute(1 as object);
-            Assert.AreEqual(expected: false, actualResult);
         }
+
         #endregion
     }
 }

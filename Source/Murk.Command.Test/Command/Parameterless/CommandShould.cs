@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Clean = Murk.DesignPatterns.Command.Parameterless;
+using Clean = Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command.Parameterless
 {
@@ -8,9 +8,11 @@ namespace Murk.Command.Test.Command.Parameterless
     public class CommandShould
     {
         #region Attributes
+
         private int _actualCount;
-        private DesignPatterns.Command.Parameterless.Command _sut;
+        private Clean.Command _sut;
         private Action _actionToExecute;
+
         #endregion
 
         [TestInitialize]
@@ -22,6 +24,7 @@ namespace Murk.Command.Test.Command.Parameterless
         }
 
         #region Constructor
+
         [TestMethod]
         public void Constructor_GuardsAgainstNull()
         {
@@ -34,9 +37,11 @@ namespace Murk.Command.Test.Command.Parameterless
         {
             _ = new Clean.Command(_actionToExecute);
         }
+
         #endregion
 
         #region Execute
+
         [TestMethod]
         public void Execute()
         {
@@ -47,9 +52,11 @@ namespace Murk.Command.Test.Command.Parameterless
             Assert.AreNotEqual(expectedCount, _actualCount);
             Assert.IsTrue(expectedCount < _actualCount);
         }
+
         #endregion
 
         #region Dispose
+
         [TestMethod]
         public void Dispose()
         {
@@ -66,6 +73,7 @@ namespace Murk.Command.Test.Command.Parameterless
             _sut.Execute();
             Assert.AreEqual(originalCount, _actualCount);
         }
+
         #endregion
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Threading.Tasks;
-using Murk.DesignPatterns.Command.Parameterless;
+using Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command.Parameterless
 {
@@ -28,6 +28,7 @@ namespace Murk.Command.Test.Command.Parameterless
         }
 
         #region Constructor
+
         [TestMethod]
         public void Constructor_GuardsAgainstNull()
         {
@@ -45,21 +46,15 @@ namespace Murk.Command.Test.Command.Parameterless
                 _canExecuteAction,
                 _actionToExecute);
         }
+
         #endregion
 
         #region Execute
+
         [TestMethod]
         public async Task CanExecute()
         {
             var actualResult = await _sut.CanExecuteAsync();
-
-            Assert.AreEqual(expected: true, actualResult);
-        }
-
-        [TestMethod]
-        public void CanExecute_NullParameter()
-        {
-            var actualResult = _sut.CanExecute(null);
 
             Assert.AreEqual(expected: true, actualResult);
         }
@@ -89,37 +84,28 @@ namespace Murk.Command.Test.Command.Parameterless
             Assert.IsTrue(expectedCount < _actualCount);
         }
 
-        [TestMethod]
-        public void Execute_NullParameter()
-        {
-            var expectedCount = _actualCount;
-
-            _sut.Execute(null);
-
-            Assert.AreNotEqual(expectedCount, _actualCount);
-            Assert.IsTrue(expectedCount < _actualCount);
-        }
         #endregion
 
         #region Can Execute Changed And Dispose
+
         [TestMethod]
-        public void RiseCanExecuteChanged()
+        public async Task RiseCanExecuteChangedAsync()
         {
             int originalCount = _actualCount;
 
-            _sut.RiseCanExecuteChanged();
+            await _sut.RiseCanExecuteChangedAsync();
 
             Assert.AreNotEqual(originalCount, _actualCount);
             Assert.IsTrue(originalCount < _actualCount);
         }
 
         [TestMethod]
-        public void Dispose()
+        public async Task Dispose()
         {
             int originalCount = _actualCount;
 
             _sut.Dispose();
-            _sut.RiseCanExecuteChanged();
+            await _sut.RiseCanExecuteChangedAsync();
 
             Assert.AreEqual(originalCount, _actualCount);
         }
@@ -134,15 +120,10 @@ namespace Murk.Command.Test.Command.Parameterless
             await _sut.ExecuteAsync();
             Assert.AreEqual(originalCount, _actualCount);
 
-            _sut.Execute(null);
-            Assert.AreEqual(originalCount, _actualCount);
-
             bool actualResult = await _sut.CanExecuteAsync();
             Assert.AreEqual(expected: false, actualResult);
-
-            actualResult = _sut.CanExecute(null);
-            Assert.AreEqual(expected: false, actualResult);
         }
+
         #endregion
     }
 }

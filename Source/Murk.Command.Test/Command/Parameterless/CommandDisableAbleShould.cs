@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Murk.DesignPatterns.Command.Parameterless;
+using Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command.Parameterless
 {
@@ -8,10 +8,12 @@ namespace Murk.Command.Test.Command.Parameterless
     public class CommandDisableAbleShould
     {
         #region Attributes
+
         private int _actualCount;
         private CommandDisableAble _sut;
         private Func<bool> _canExecuteAction;
         private Action _actionToExecute;
+
         #endregion
 
         [TestInitialize]
@@ -56,14 +58,6 @@ namespace Murk.Command.Test.Command.Parameterless
         }
 
         [TestMethod]
-        public void CanExecute_NullParameter()
-        {
-            var actualResult = _sut.CanExecute(null);
-
-            Assert.AreEqual(expected: true, actualResult);
-        }
-
-        [TestMethod]
         public void CannotExecute()
         {
             int expectedCount = _actualCount;
@@ -88,19 +82,10 @@ namespace Murk.Command.Test.Command.Parameterless
             Assert.IsTrue(expectedCount < _actualCount);
         }
 
-        [TestMethod]
-        public void Execute_NullParameter()
-        {
-            var expectedCount = _actualCount;
-
-            _sut.Execute(null);
-
-            Assert.AreNotEqual(expectedCount, _actualCount);
-            Assert.IsTrue(expectedCount < _actualCount);
-        }
         #endregion
 
         #region Can Execute Changed And Dispose
+
         [TestMethod]
         public void RiseCanExecuteChanged()
         {
@@ -133,15 +118,10 @@ namespace Murk.Command.Test.Command.Parameterless
             _sut.Execute();
             Assert.AreEqual(originalCount, _actualCount);
 
-            _sut.Execute(null);
-            Assert.AreEqual(originalCount, _actualCount);
-
             bool actualResult = _sut.CanExecute();
             Assert.AreEqual(expected: false, actualResult);
-
-            actualResult = _sut.CanExecute(null);
-            Assert.AreEqual(expected: false, actualResult);
         }
+
         #endregion
     }
 }

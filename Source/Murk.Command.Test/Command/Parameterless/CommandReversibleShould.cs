@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Murk.DesignPatterns.Command.Parameterless;
+using Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command.Parameterless
 {
@@ -42,6 +42,7 @@ namespace Murk.Command.Test.Command.Parameterless
         #endregion
 
         #region Execute
+
         [TestMethod]
         public void Execute()
         {
@@ -64,9 +65,11 @@ namespace Murk.Command.Test.Command.Parameterless
             _sut.Reverse();
             Assert.AreEqual(originalCount, _actualCount);
         }
+
         #endregion
 
         #region Dispose
+
         [TestMethod]
         public void Dispose()
         {
@@ -86,6 +89,7 @@ namespace Murk.Command.Test.Command.Parameterless
             _sut.Reverse();
             Assert.AreEqual(originalCount, _actualCount);
         }
+
         #endregion
     }
 }

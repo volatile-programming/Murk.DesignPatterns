@@ -31,6 +31,7 @@ namespace Murk.Command.Test.Command
         }
 
         #region Constructor
+
         [TestMethod]
         public void Constructor_GuardsAgainstNull()
         {
@@ -61,21 +62,15 @@ namespace Murk.Command.Test.Command
                 _actionToExecute,
                 _undoAction);
         }
+
         #endregion
 
         #region Execute
+
         [TestMethod]
         public async Task CanExecute()
         {
             var actualResult = await _sut.CanExecuteAsync(1);
-
-            Assert.AreEqual(expected: true, actualResult);
-        }
-
-        [TestMethod]
-        public void CanExecute_ObjectParameter()
-        {
-            var actualResult = _sut.CanExecute(1 as object);
 
             Assert.AreEqual(expected: true, actualResult);
         }
@@ -104,16 +99,6 @@ namespace Murk.Command.Test.Command
         {
             Assert.ThrowsExceptionAsync<ArgumentNullException>(
                 () => _sut.CanExecuteAsync(null));
-
-            Assert.ThrowsException<ArgumentNullException>(
-                () => _sut.CanExecute(null));
-        }
-
-        [TestMethod]
-        public void CanExecute_ThrowsInvalidCastException()
-        {
-            Assert.ThrowsException<InvalidCastException>(
-                () => _sut.Execute(""));
         }
 
         [TestMethod]
@@ -128,31 +113,10 @@ namespace Murk.Command.Test.Command
         }
 
         [TestMethod]
-        public void Execute_ObjectParameter()
-        {
-            var expectedCount = _actualCount;
-
-            _sut.Execute(1 as object);
-
-            Assert.AreNotEqual(expectedCount, _actualCount);
-            Assert.IsTrue(expectedCount < _actualCount);
-        }
-
-        [TestMethod]
         public void Execute_GuardsAgainstNull()
         {
             Assert.ThrowsExceptionAsync<ArgumentNullException>(
                 () => _sut.ExecuteAsync(null));
-
-            Assert.ThrowsException<ArgumentNullException>(
-                () => _sut.Execute(null));
-        }
-
-        [TestMethod]
-        public void Execute_ThrowsInvalidCastException()
-        {
-            Assert.ThrowsException<InvalidCastException>(
-                () => _sut.Execute(""));
         }
 
         [TestMethod]
@@ -173,27 +137,29 @@ namespace Murk.Command.Test.Command
             Assert.ThrowsExceptionAsync<ArgumentNullException>(
                 () => _sut.ReverseAsync(null));
         }
+
         #endregion
 
         #region Can Execute Changed And Dispose
+
         [TestMethod]
-        public void RiseCanExecuteChanged()
+        public async Task RiseCanExecuteChangedAsync()
         {
             int originalCount = _actualCount;
 
-            _sut.RiseCanExecuteChanged();
+            await _sut.RiseCanExecuteChangedAsync();
 
             Assert.AreNotEqual(originalCount, _actualCount);
             Assert.IsTrue(originalCount < _actualCount);
         }
 
         [TestMethod]
-        public void Dispose()
+        public async Task Dispose()
         {
             int originalCount = _actualCount;
 
             _sut.Dispose();
-            _sut.RiseCanExecuteChanged();
+            await _sut.RiseCanExecuteChangedAsync();
 
             Assert.AreEqual(originalCount, _actualCount);
         }
@@ -208,18 +174,13 @@ namespace Murk.Command.Test.Command
             await _sut.ExecuteAsync(1);
             Assert.AreEqual(originalCount, _actualCount);
 
-            _sut.Execute(1);
-            Assert.AreEqual(originalCount, _actualCount);
-
             await _sut.ReverseAsync(1);
             Assert.AreEqual(originalCount, _actualCount);
 
             bool actualResult = await _sut.CanExecuteAsync(1);
             Assert.AreEqual(expected: false, actualResult);
-
-            actualResult = _sut.CanExecute(1);
-            Assert.AreEqual(expected: false, actualResult);
         }
+
         #endregion
     }
 }

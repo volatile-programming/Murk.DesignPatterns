@@ -8,14 +8,16 @@
 		/// <summary>
 		/// Indicate whether the object is disposing or not.
 		/// </summary>
-		protected bool IsDisposing { get; set; }
+		protected bool IsDisposing { get; private set; }
 
-		/// <summary>
-		/// Dispose object dependencies an events subscribers.
-		/// </summary>
-		/// <param name="isDisposing">Indicate dispose estate.</param>
-		protected virtual void Dispose(bool isDisposing) =>
+        /// <summary>
+        /// Dispose object dependencies an events subscribers.
+        /// </summary>
+        /// <param name="isDisposing">Indicate dispose estate.</param>
+        protected virtual void Dispose(bool isDisposing)
+        {
 			IsDisposing = isDisposing;
+        }
 
 		/// <inheritdoc/>
 		public void Dispose()
