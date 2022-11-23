@@ -30,6 +30,4 @@ Interfaces, base classes and generic implementation of the command design patter
 	  <ProjectReference Include="..\Murk.DesignPatterns.BaseClasses\Murk.DesignPatterns.BaseClasses.csproj" />
 	</ItemGroup>
 
-	<Import Project="..\Murk.Common\Murk.Common.projitems" Label="Shared" />
-
 </Project>

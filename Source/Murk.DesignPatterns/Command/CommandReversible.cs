@@ -10,8 +10,10 @@ namespace Murk.DesignPatterns.Command
     public class CommandReversible : BaseCommandReversible
     {
         #region Attributes
+
         private Action _actionToExecute;
         private Action _undoAction;
+
         #endregion
 
         /// <summary>

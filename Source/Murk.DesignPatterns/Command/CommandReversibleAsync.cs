@@ -6,9 +6,8 @@ using Murk.DesignPatterns.BaseClasses.Command;
 namespace Murk.DesignPatterns.Command
 {
     /// <summary>
-    /// Lightweight reversible generic async command.
+    /// Lightweight reversible async parameterless command.
     /// </summary>
-    /// <typeparam name="T"><inheritdoc/></typeparam>
     public class CommandReversibleAsync : BaseCommandReversibleAsync
     {
         #region Attributes

@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Murk.DesignPatterns.Command;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Murk.DesignPatterns.Command;
 
 namespace Murk.Command.Test.Command
 {

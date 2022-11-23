@@ -74,7 +74,6 @@ Global
 		SolutionGuid = {1CFC926C-BD25-448D-853B-D8A38A41E9E6}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Source\Murk.Common\Murk.Common.projitems*{5a26e992-8614-437a-b3d8-2d98f67e6f6c}*SharedItemsImports = 5
 		Source\Murk.Common\Murk.Common.projitems*{c4ed04ef-9b39-43b5-9f48-fbd425c01ef8}*SharedItemsImports = 13
 		Source\Murk.Common\Murk.Common.projitems*{de1afdf2-c0b0-4a5c-9456-552175e2b195}*SharedItemsImports = 5
 	EndGlobalSection
