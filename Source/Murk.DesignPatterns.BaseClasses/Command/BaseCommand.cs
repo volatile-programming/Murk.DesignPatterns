@@ -1,5 +1,5 @@
 ﻿using System;
-using Murk.Common;
+using Murk.Common.BaseClasses;
 using Murk.DesignPatterns.Interfaces.Command;
 
 namespace Murk.DesignPatterns.BaseClasses.Command
