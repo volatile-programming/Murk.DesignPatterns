@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7EF81863-20E1-4B7C-995A-13C82739B2BE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{7EF81863-20E1-4B7C-995A-13C82739B2BE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commons", "Commons", "{1F787D40-E978-48B7-B302-26F9B69BD182}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Commons", "2 - Commons", "{1F787D40-E978-48B7-B302-26F9B69BD182}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design Patterns", "Design Patterns", "{712BDD08-B672-46C1-9FC5-BA0494F5685A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Design Patterns", "3 - Design Patterns", "{712BDD08-B672-46C1-9FC5-BA0494F5685A}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Murk.Common", "Source\Murk.Common\Murk.Common.shproj", "{C4ED04EF-9B39-43B5-9F48-FBD425C01EF8}"
 EndProject
@@ -18,6 +18,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Murk.DesignPatterns", "Source\Murk.DesignPatterns\Murk.DesignPatterns.csproj", "{5A26E992-8614-437A-B3D8-2D98F67E6F6C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Murk.Command.Test", "Source\Murk.Command.Test\Murk.Command.Test.csproj", "{6368CC31-62A3-4B00-A090-8B334A588370}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Solution Items", "1 - Solution Items", "{B0C137AA-BF33-4866-9F43-F86CC2CE63E1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.md = LICENSE.md
+		Murk.DesignPatterns.sln.DotSettings.user = Murk.DesignPatterns.sln.DotSettings.user
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

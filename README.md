@@ -5,12 +5,31 @@ Cross cutting concern NuGets for quick implementation of design patterns.
 
 |                NuGet names                  | Version | Estate |
 |---------------------------------------------|:-------:|:------:|
-| Murk.DesignPatterns                         | 0.0.1   |  Beta  |
-| Murk.DesignPatterns.BaseClasses             | 0.0.1   |  Beta  |
-| Murk.DesignPatterns.Interfaces              | 0.0.1   |  Beta  |
-| Murk.DesignPatterns.Command.Implementations | 0.0.1   |  Beta  |
-| Murk.DesignPatterns.Command.BaseClasses     | 0.0.1   |  Beta  |
-| Murk.DesignPatterns.Command.Interfaces      | 0.0.1   |  Beta  |
+| Murk.DesignPatterns                         | 0.0.2   |  Beta  |
+| Murk.DesignPatterns.BaseClasses             | 0.0.2   |  Beta  |
+| Murk.DesignPatterns.Interfaces              | 0.0.2   |  Beta  |
+
+### Breaking changes
+
+From version `0.0.1` to `0.0.2` The command design pattern have several changes to follow SOLID principles and reduce code duplication.
+
+Previously the `ICommand` interface implemented `System.Command`, also, each interface had the full ICommand implementation, 
+
+```csharp
+    public interface ICommandReversible : ICommand
+    {
+        void Reverse();
+    }
+```
+
+now it only has the specific interface contract.
+
+```csharp
+    public interface IReversible
+    {
+        void Reverse();
+    }
+```
 
 ### Abalible design patterns
 
